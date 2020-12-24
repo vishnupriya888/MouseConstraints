@@ -1,4 +1,3 @@
-
 // module aliases
 var Engine = Matter.Engine,
   // Render = Matter.Render,
@@ -38,7 +37,7 @@ function setup() {
         bodyA: p.body,
         bodyB: prev.body,
         length: 20,
-        stiffness: 0.4
+        stiffness: 0.4,
       };
       var constraint = Constraint.create(options);
       World.add(world, constraint);
@@ -53,7 +52,7 @@ function setup() {
   canvasmouse.pixelRatio = pixelDensity();
   //console.log(canvasmouse);
   var options = {
-    mouse: canvasmouse
+    mouse: canvasmouse,
   };
   mConstraint = MouseConstraint.create(engine, options);
   World.add(world, mConstraint);
